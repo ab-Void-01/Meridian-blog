@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meridian — A Field Journal of Mind &amp; World</title>
+<meta name="description" content="Meridian is a field journal charting the terrain between mind and world — philosophy, nature, technology, survival, space, poetry, psychology and adventure." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="css/style.css" /> -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ READING PROGRESS ============ -->
+<div class="progress-track" aria-hidden="true">
+  <div class="progress-fill" id="progressFill"></div>
+</div>
+
+<!-- ============ PAGE LOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader-mark">
+    <span class="loader-ring"></span>
+    <span class="loader-coord">08.42&deg; N — MERIDIAN</span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">M</span>
+      <span class="logo-word">Meridian</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#top" class="nav-link">Home</a></li>
+        <li><a href="#blogs" class="nav-link">Blogs</a></li>
+        <li><a href="#categories" class="nav-link">Categories</a></li>
+        <li><a href="#poetry" class="nav-link">Poetry</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-stars" id="heroStars" aria-hidden="true"></canvas>
+    <div class="hero-blob blob-a" aria-hidden="true"></div>
+    <div class="hero-blob blob-b" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-coord reveal">11.56&deg; N, 92.24&deg; E &mdash; CURRENT POSITION</p>
+      <h1 class="hero-title reveal">
+        The map is not<br/><em>the territory.</em>
+      </h1>
+      <p class="hero-sub reveal">
+        Meridian is a field journal charting the terrain between mind and world &mdash;
+        dispatches on philosophy, nature, technology, survival, space, poetry, psychology and adventure.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#blogs" class="btn btn-primary magnetic">Read the latest</a>
+        <a href="#categories" class="btn btn-ghost magnetic">Explore waypoints</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <span></span>
+      <p>Scroll to descend</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED 3D CARDS ============ -->
+  <section class="featured" id="featured">
+    <div class="section-head">
+      <p class="eyebrow reveal">Featured Dispatches</p>
+      <h2 class="section-title reveal">Three routes worth taking</h2>
+    </div>
+
+    <div class="featured-grid">
+
+      <article class="tilt-card reveal" data-tilt>
+        <div class="tilt-card-inner">
+          <div class="tilt-card-media">
+            <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=900&q=70" alt="Mountain ridge at dawn" loading="lazy" />
+            <span class="badge badge-brass">TERRA &middot; Nature</span>
+          </div>
+          <div class="tilt-card-body">
+            <div class="meta-row">
+              <span class="meta-item">6 min read</span>
+              <span class="meta-dot">&bull;</span>
+              <span class="meta-item">Jul 12, 2026</span>
+            </div>
+            <h3>What the Ridge Line Teaches About Restraint</h3>
+            <p>On altitude, patience, and the discipline of turning back before the summit.</p>
+            <a href="#" class="read-more magnetic">Read more <span>&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-tilt>
+        <div class="tilt-card-inner">
+          <div class="tilt-card-media">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=70" alt="Deep space nebula" loading="lazy" />
+            <span class="badge badge-teal">ORBIT &middot; Space</span>
+          </div>
+          <div class="tilt-card-body">
+            <div class="meta-row">
+              <span class="meta-item">9 min read</span>
+              <span class="meta-dot">&bull;</span>
+              <span class="meta-item">Jul 08, 2026</span>
+            </div>
+            <h3>The Loneliness of the Voyager Signal</h3>
+            <p>A meditation on distance, silence, and the small machine still calling home.</p>
+            <a href="#" class="read-more magnetic">Read more <span>&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="tilt-card reveal" data-tilt>
+        <div class="tilt-card-inner">
+          <div class="tilt-card-media">
+            <img src="https://images.unsplash.com/photo-1499744937866-d7e566a20a61?w=900&q=70" alt="Open book and lantern" loading="lazy" />
+            <span class="badge badge-rust">MIND &middot; Philosophy</span>
+          </div>
+          <div class="tilt-card-body">
+            <div class="meta-row">
+              <span class="meta-item">7 min read</span>
+              <span class="meta-dot">&bull;</span>
+              <span class="meta-item">Jul 02, 2026</span>
+            </div>
+            <h3>Why Stoicism Keeps Getting Rediscovered</h3>
+            <p>Every generation finds the Stoics again, usually during a shipwreck.</p>
+            <a href="#" class="read-more magnetic">Read more <span>&rarr;</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="categories" id="categories">
+    <div class="section-head">
+      <p class="eyebrow reveal">Waypoints</p>
+      <h2 class="section-title reveal">Eight terrains, one journal</h2>
+    </div>
+
+    <div class="category-grid">
+      <a class="category-card reveal" href="#blogs" style="--i:0"><span class="cat-coord">01</span><span class="cat-name">Philosophy</span></a>
+      <a class="category-card reveal" href="#blogs" style="--i:1"><span class="cat-coord">02</span><span class="cat-name">Nature</span></a>
+      <a class="category-card reveal" href="#blogs" style="--i:2"><span class="cat-coord">03</span><span class="cat-name">Technology</span></a>
+      <a class="category-card reveal" href="#blogs" style="--i:3"><span class="cat-coord">04</span><span class="cat-name">Survival</span></a>
+      <a class="category-card reveal" href="#blogs" style="--i:4"><span class="cat-coord">05</span><span class="cat-name">Space</span></a>
+      <a class="category-card reveal" href="#poetry" style="--i:5"><span class="cat-coord">06</span><span class="cat-name">Poetry</span></a>
+      <a class="category-card reveal" href="#blogs" style="--i:6"><span class="cat-coord">07</span><span class="cat-name">Psychology</span></a>
+      <a class="category-card reveal" href="#blogs" style="--i:7"><span class="cat-coord">08</span><span class="cat-name">Adventure</span></a>
+    </div>
+  </section>
+
+  <!-- ============ LATEST BLOGS (MASONRY) ============ -->
+  <section class="latest" id="blogs">
+    <div class="section-head">
+      <p class="eyebrow reveal">Latest Entries</p>
+      <h2 class="section-title reveal">Fresh from the field</h2>
+    </div>
+
+    <div class="masonry" id="masonryGrid">
+      <!-- Skeletons injected then replaced by JS -->
+    </div>
+  </section>
+
+  <!-- ============ POETRY STRIP ============ -->
+  <section class="poetry" id="poetry">
+    <div class="section-head">
+      <p class="eyebrow reveal">Poetry</p>
+      <h2 class="section-title reveal">Short lines, long echoes</h2>
+    </div>
+    <div class="poetry-grid">
+      <article class="poem-card reveal">
+        <p class="poem-coord">i.</p>
+        <p class="poem-text">the desert does not / apologize for / what it withholds &mdash;<br/>neither will I.</p>
+      </article>
+      <article class="poem-card reveal">
+        <p class="poem-coord">ii.</p>
+        <p class="poem-text">every meridian / is a promise / the earth makes / to itself.</p>
+      </article>
+      <article class="poem-card reveal">
+        <p class="poem-coord">iii.</p>
+        <p class="poem-text">silence is not / empty &mdash; it is / a room I have not / finished furnishing.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CINEMATIC QUOTE ============ -->
+  <section class="quote-scene" id="quoteScene">
+    <canvas class="quote-stars" id="quoteStars" aria-hidden="true"></canvas>
+    <div class="quote-aurora" aria-hidden="true"></div>
+    <div class="quote-particles" id="quoteParticles" aria-hidden="true"></div>
+
+    <div class="quote-content">
+      <span class="quote-mark quote-mark-open" aria-hidden="true">&ldquo;</span>
+      <p class="quote-text" id="quoteText" data-text="Not all who wander are lost, but most of us are, and that is where the good notes come from.">Not all who wander are lost, but most of us are, and that is where the good notes come from.</p>
+      <span class="quote-mark quote-mark-close" aria-hidden="true">&rdquo;</span>
+      <p class="quote-attr">&mdash; Field notes, Meridian Vol. III</p>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="eyebrow">About the Journal</p>
+        <h2 class="section-title">Written between destinations</h2>
+        <p>Meridian began as a set of notebooks carried across mountains, server rooms, and quiet libraries. It stayed a journal because the terrain kept changing &mdash; a ridge line one week, a philosophy seminar the next, a satellite downlink after that.</p>
+        <p>Every entry is filed under a waypoint, not a genre. The territory is the same whether you're reading about a glacier or a theory of mind: attention, carefully spent.</p>
+      </div>
+      <div class="about-figure reveal" aria-hidden="true">
+        <div class="about-ring"></div>
+        <span class="about-coord">EST. 2024</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="section-title reveal">Send a dispatch our way</h2>
+    </div>
+    <form class="contact-form reveal" id="contactForm">
+      <div class="field-row">
+        <div class="field">
+          <label for="cName">Name</label>
+          <input type="text" id="cName" name="name" required />
+        </div>
+        <div class="field">
+          <label for="cEmail">Email</label>
+          <input type="email" id="cEmail" name="email" required />
+        </div>
+      </div>
+      <div class="field">
+        <label for="cMsg">Message</label>
+        <textarea id="cMsg" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary magnetic">
+        <span class="btn-label">Send message</span>
+      </button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer reveal" id="siteFooter">
+  <div class="footer-grid">
+    <div class="footer-about">
+      <a href="#top" class="logo">
+        <span class="logo-mark">M</span>
+        <span class="logo-word">Meridian</span>
+      </a>
+      <p>A field journal charting the terrain between mind and world. New dispatches most Tuesdays.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <p class="footer-heading">Navigate</p>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#poetry">Poetry</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-social">
+      <p class="footer-heading">Follow</p>
+      <div class="social-icons">
+        <a href="#" class="social-icon magnetic" aria-label="Twitter / X">&#120143;</a>
+        <a href="#" class="social-icon magnetic" aria-label="Instagram">&#9737;</a>
+        <a href="#" class="social-icon magnetic" aria-label="RSS feed">&#8734;</a>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <p class="footer-heading">Newsletter</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="you@somewhere.com" aria-label="Email address" required />
+        <button type="submit" class="magnetic" aria-label="Subscribe">&rarr;</button>
+      </form>
+      <p class="form-status" id="newsletterStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Meridian Journal. All coordinates approximate.</p>
+  </div>
+</footer>
+
+<!-- ============ SCROLL TO TOP ============ -->
+<button class="scroll-top magnetic" id="scrollTop" aria-label="Scroll to top">&uarr;</button>
+
+<!-- <script src="js/script.js"></script> -->
+<script src="script.js"></script>
+</body>
+</html>
